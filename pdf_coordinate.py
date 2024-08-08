@@ -16,8 +16,16 @@ def on_click(event):
     print(f"Mapped PDF coordinates: ({pdf_x}, {pdf_y})")
 
 
-# Load the PDF and get the first page
-pdf_path = input("Enter the path to the PDF file: ")
+# Load the PDF and get the first page, prompt if error
+try:
+    pdf_path = "sample.pdf"
+    document = fitz.open(pdf_path)
+    page = document.load_page(0)
+except Exception as e:
+    print(f"Error loading PDF: {e}")
+    
+#pdf_path = input("Enter the path to the PDF file: ")
+
 document = fitz.open(pdf_path)
 page = document.load_page(0)
 
