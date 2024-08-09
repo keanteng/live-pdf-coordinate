@@ -18,7 +18,7 @@ def on_click(event):
 
 # Load the PDF and get the first page, prompt if error
 try:
-    pdf_path = "sample.pdf"
+    pdf_path = "einvoicer_template1.pdf"
     document = fitz.open(pdf_path)
     page = document.load_page(0)
 except Exception as e:
