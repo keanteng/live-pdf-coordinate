@@ -1,4 +1,4 @@
-import fitz  # PyMuPDF
+import pymupdf  # PyMuPDF
 import tkinter as tk
 from PIL import Image, ImageTk
 
@@ -18,15 +18,15 @@ def on_click(event):
 
 # Load the PDF and get the first page, prompt if error
 try:
-    pdf_path = "einvoicer_template1.pdf"
-    document = fitz.open(pdf_path)
+    pdf_path = "sample.pdf"
+    document = pymupdf.open(pdf_path)
     page = document.load_page(0)
 except Exception as e:
     print(f"Error loading PDF: {e}")
     
 #pdf_path = input("Enter the path to the PDF file: ")
 
-document = fitz.open(pdf_path)
+document = pymupdf.open(pdf_path)
 page = document.load_page(0)
 
 # Render the page to an image

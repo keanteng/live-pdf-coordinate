@@ -1,2 +1,1 @@
-PyMuPDF pynput
-PyMuPDF tk
+pymupdf
