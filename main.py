@@ -99,7 +99,7 @@ def go_to_page():
 
 # Load the PDF and get the first page, prompt if error
 try:
-    pdf_path = "sample_merged.pdf"
+    pdf_path = "hcs_card.pdf"
     document = pymupdf.open(pdf_path)
     total_pages = document.page_count
     current_page = 0
